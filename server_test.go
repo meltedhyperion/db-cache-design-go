@@ -37,6 +37,7 @@ func TestHandleGetUserConncurent(t *testing.T) {
 		time.Sleep(1 * time.Millisecond) // i've kept it low since my system is powerful. One can adjust as per their system :)
 	}
 	wg.Wait()
+	ts.Close()
 	endTime := time.Now()
 
 	fmt.Println("Time taken for 1000 requests (async):", endTime.Sub(startTime))
