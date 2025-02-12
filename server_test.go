@@ -39,7 +39,7 @@ func TestHandleGetUserConncurent(t *testing.T) {
 	wg.Wait()
 	endTime := time.Now()
 
-	fmt.Println("Time taken for 1000 requests:", endTime.Sub(startTime))
+	fmt.Println("Time taken for 1000 requests (async):", endTime.Sub(startTime))
 	fmt.Println("DB hits:", s.dbHit)
 }
 
@@ -67,6 +67,6 @@ func TestHandleGetUserSync(t *testing.T) {
 
 	endTime := time.Now()
 
-	fmt.Println("Time taken for 1000 requests:", endTime.Sub(startTime))
+	fmt.Println("Time taken for 1000 requests (sync):", endTime.Sub(startTime))
 	fmt.Println("DB hits:", s.dbHit)
 }
